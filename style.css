@@ -4,22 +4,22 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-.info {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.info .info-img {
+.header .header__image {
   width: 100%;
 }
-.info-link {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .info {
+  .header {
     text-align: center;
   }
 
@@ -29,12 +29,7 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-.task-wrapper {
+.todo-add__wrapper {
   display: flex;
 }
 ul {
@@ -49,7 +44,7 @@ input,
 button {
   outline: none;
 }
-.btn {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -58,7 +53,7 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.btn:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -72,7 +67,7 @@ h3,
   margin: 0;
   text-transform: uppercase;
 }
-.task-input {
+.input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -83,71 +78,75 @@ h3,
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 56%;
+  display: inline-block;
+  flex-grow: 1;
 }
-.task-input:focus {
+.input:focus {
   color: #333;
 }
 
 /* New Task */
-.title-add-task {
+.todo-add__title {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.todo-add__input {
   width: 318px;
 }
 
 /* Task list */
-.tasks-item {
+.todo__task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
-.tasks-item > * {
+.todo__task > * {
   vertical-align: middle;
 }
 
-.task-checkbox {
+.todo__checkbox {
   margin: 0 10px;
 }
-.task-text {
+.todo__text {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  flex-grow: 1;
 }
-.task-input-item {
+.todo__input {
   width: 226px;
 }
-.delete-img {
+.todo__image_delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete-img:hover {
+.todo__image_delete:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#done-tasks .task-text {
+.todo__items_done .todo__text {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task-input-item {
+.todo__input {
   display: none;
 }
 
-.edit-mode .task-input-item {
+.todo__task_edit .todo__input {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task-text {
+.todo__task_edit .todo__text {
   display: none;
 }
